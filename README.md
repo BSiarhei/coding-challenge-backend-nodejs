@@ -30,3 +30,17 @@ Please stick to the Product Requirements. You should not implement authorisation
 - **Send us an email with a link to repository when you finish the assesment**.
 - Please do not spend more than 4 hours.
 - Please complete your working solution within 7 days of receiving this challenge.
+
+## bootstrapping
+
+Run command `docker-compose up -d` . Docker must be installed [Docker](https://www.docker.com/products/docker-desktop)
+
+Default PORT is `3001`. In order to change please fix docker-compose file.
+
+## API
+
+`http://localhost:3001/api`
+
+## Tests
+
+In order to perform tests run `docker exec -it event-web npm run test`
