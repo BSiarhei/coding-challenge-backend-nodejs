@@ -2,13 +2,15 @@
   "CONNECTIONS": {
     "REDIS": {
       "PORT": "63799",
-      "HOST": "localhost"
+      "HOST": "localhost",
+      "URL": null
     },
     "POSTGRES": {
       "PORT": "54322",
       "HOST": "localhost",
       "DB": "event",
-      "USER": "root"
+      "USER": "root",
+      "URL": null
     }
   },
   "DEBUG": false,

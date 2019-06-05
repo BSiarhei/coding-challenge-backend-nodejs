@@ -3,13 +3,15 @@
   "CONNECTIONS": {
     "REDIS": {
       "PORT": "REDIS_PORT",
-      "HOST": "REDIS_HOST"
+      "HOST": "REDIS_HOST",
+      "URL": "REDIS_URL"
     },
     "POSTGRES": {
       "PORT": "POSTGRES_PORT",
       "HOST": "POSTGRES_HOST",
       "DB": "POSTGRES_DB",
-      "USER": "POSTGRES_USER"
+      "USER": "POSTGRES_USER",
+      "URL": "DATABASE_URL"
     }
   },
   "PORT": "PORT"
