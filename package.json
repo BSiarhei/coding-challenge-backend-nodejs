@@ -13,7 +13,8 @@
     "watch:ts": "tsc --project tsconfig.json --watch",
     "lint:ts": "tslint --config tslint.json --project tsconfig.json",
     "fix:ts": "tslint --fix --config tslint.json  --project tsconfig.json",
-    "start": "node index"
+    "start": "node index",
+    "start:heroku": "npm run migration-up && npm run build:ts && node index"
   },
   "repository": {
     "type": "git",
