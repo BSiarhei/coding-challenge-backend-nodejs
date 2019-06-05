@@ -1,0 +1,5 @@
+{
+  "sql-file": true,
+  "configFile": "db/config.js",
+  "migrations-dir": "db/migrations/scripts"
+}

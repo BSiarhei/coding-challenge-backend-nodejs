@@ -1,0 +1,17 @@
+{
+  "CONNECTIONS": {
+    "REDIS": {
+      "PORT": "63799",
+      "HOST": "localhost"
+    },
+    "POSTGRES": {
+      "PORT": "54322",
+      "HOST": "localhost",
+      "DB": "event",
+      "USER": "root"
+    }
+  },
+  "DEBUG": false,
+  "EVENT_QUEUE_NAME": "events",
+  "PORT": 3001
+}

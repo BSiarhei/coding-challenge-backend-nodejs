@@ -1,0 +1,57 @@
+{
+  "name": "event-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.json",
+    "migration-create": "node node_modules/db-migrate/bin/db-migrate create",
+    "migration-up": "node node_modules/db-migrate/bin/db-migrate up",
+    "migration-down": "node node_modules/db-migrate/bin/db-migrate down",
+    "build": "npm run build:ts",
+    "build:ts": "tsc --project tsconfig.json",
+    "watch:ts": "tsc --project tsconfig.json --watch",
+    "lint:ts": "tslint --config tslint.json --project tsconfig.json",
+    "fix:ts": "tslint --fix --config tslint.json  --project tsconfig.json",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BSiarhei/event-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BSiarhei/event-test/issues"
+  },
+  "homepage": "https://github.com/BSiarhei/event-test#readme",
+  "dependencies": {
+    "@nestjs/common": "^6.2.0",
+    "@nestjs/core": "^6.2.0",
+    "@nestjs/platform-express": "^6.2.0",
+    "@nestjs/swagger": "^3.0.2",
+    "@nestjs/typeorm": "^6.1.1",
+    "bull": "^3.9.1",
+    "class-transformer": "^0.2.2",
+    "class-validator": "^0.9.1",
+    "config": "^3.1.0",
+    "db-migrate": "^0.11.5",
+    "db-migrate-pg": "^0.5.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2",
+    "swagger-ui-express": "^4.0.5",
+    "typeorm": "^0.2.17"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^6.2.4",
+    "@types/faker": "^4.1.5",
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.2",
+    "faker": "^4.1.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.4.5"
+  }
+}

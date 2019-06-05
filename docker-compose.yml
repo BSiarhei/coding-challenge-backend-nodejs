@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:11.3
+    container_name: event-postgresql
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - 54322:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_DB: event
+  redis:
+    image: redis:5.0.5
+    container_name: event-redis
+    ports:
+      - 63799:6379
+  web:
+    image: node:12.3.1
+    container_name: event-web
+    command: bash -c "sleep 5 && npm install && npm run migration-up && npm run build && npm run start"
+    depends_on:
+      - redis
+      - postgres
+    links:
+      - redis
+      - postgres
+    working_dir: /eventApp
+    volumes:
+      - ./:/eventApp
+    environment:
+      POSTGRES_PORT: 5432
+      POSTGRES_HOST: postgres
+      REDIS_PORT: 6379
+      REDIS_HOST: redis
+      PORT: 80
+    ports:
+      - 3001:80
+volumes:
+  postgres_data:

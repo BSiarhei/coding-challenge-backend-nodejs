@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "tslint-config-airbnb"
+  ],
+  "rules": {
+    "ter-indent": [true, 4],
+    "max-line-length": [
+      true,
+      {
+        "limit": 140,
+        "ignore-pattern": "^import [^,]+ from |^export | implements"
+      }
+    ],
+    "import-name": false,
+    "trailing-comma": false,
+    "no-null-keyword": false,
+    "newline-per-chained-call": false,
+    "no-unsafe-any": false,
+    "strict-boolean-expressions": false,
+    "match-default-export-name": false,
+    "promise-function-async": [
+      true,
+      "check-function-declaration",
+      "check-function-expression"
+    ],
+    "function-name": [
+      true,
+      {
+        "static-method-regex": "^[a-z][\\w\\d]+$"
+      }
+    ],
+    "prefer-method-signature": false,
+    "no-multiline-string": false
+  }
+}
