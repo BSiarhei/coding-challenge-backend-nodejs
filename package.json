@@ -1,5 +1,5 @@
 {
-  "name": "event-test",
+  "name": "event-officer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BSiarhei/event-test.git"
+    "url": "git+https://github.com/BSiarhei/coding-challenge-backend-nodejs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BSiarhei/event-test/issues"
+    "url": "https://github.com/BSiarhei/coding-challenge-backend-nodejs/issues"
   },
-  "homepage": "https://github.com/BSiarhei/event-test#readme",
+  "homepage": "https://github.com/BSiarhei/coding-challenge-backend-nodejs#readme",
   "dependencies": {
     "@nestjs/common": "^6.2.0",
     "@nestjs/core": "^6.2.0",
