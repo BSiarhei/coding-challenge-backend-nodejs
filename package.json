@@ -8,13 +8,12 @@
     "migration-create": "node node_modules/db-migrate/bin/db-migrate create",
     "migration-up": "node node_modules/db-migrate/bin/db-migrate up",
     "migration-down": "node node_modules/db-migrate/bin/db-migrate down",
-    "build": "npm run build:ts",
+    "build": "npm run migration-up && npm run build:ts",
     "build:ts": "tsc --project tsconfig.json",
     "watch:ts": "tsc --project tsconfig.json --watch",
     "lint:ts": "tslint --config tslint.json --project tsconfig.json",
     "fix:ts": "tslint --fix --config tslint.json  --project tsconfig.json",
-    "start": "node index",
-    "start:heroku": "npm run migration-up && npm run build:ts && node index"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
