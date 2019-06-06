@@ -4,6 +4,8 @@ import config from 'config';
 
 const DEBUG = config.get('DEBUG');
 
+const NODE_ENV = config.get('NODE_ENV');
+
 const templatePathToDataModels = `${__dirname.replace(/\\/g, '/')}/../**/dataAccess/models/*DataModel{.ts,.js}`;
 
 const POSTGRES_PORT = config.get('CONNECTIONS.POSTGRES.PORT');
@@ -23,7 +25,11 @@ const url = POSTGRES_URL || `postgres://${POSTGRES_USER}@${POSTGRES_HOST}:${POST
             entities: [templatePathToDataModels],
             synchronize: false,
             logging: DEBUG ? ['query', 'error'] : [],
-            extra: { max: 20, min: 1 }
+            extra: {
+                max: 20,
+                min: 1,
+                ssl: NODE_ENV !== 'debug'
+            }
         })
     ]
 })

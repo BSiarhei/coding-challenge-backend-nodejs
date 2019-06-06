@@ -12,11 +12,24 @@ module.exports = {
     defaultEnv: { ENV: 'NODE_ENV' },
     debug: {
         driver: 'pg',
-        url: url
+        url: url,
+        schema: 'public'
     },
     develop: {
         driver: 'pg',
         url: url,
+        schema: 'public',
+        addIfNotExists: {
+            sslmode: 'require'
+        },
+        overwrite: {
+            native: true
+        }
+    },
+    deploy: {
+        driver: 'pg',
+        url: url,
+        schema: 'public',
         addIfNotExists: {
             sslmode: 'require'
         },
