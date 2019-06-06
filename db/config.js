@@ -11,30 +11,20 @@ const url = POSTGRES_URL || `postgres://${POSTGRES_USER}@${POSTGRES_HOST}:${POST
 module.exports = {
     defaultEnv: { ENV: 'NODE_ENV' },
     debug: {
-        driver: 'pg',
+        dialect: 'postgres',
         url: url,
         schema: 'public'
     },
     develop: {
-        driver: 'pg',
+        dialect: 'postgres',
         url: url,
         schema: 'public',
-        addIfNotExists: {
-            sslmode: 'require'
-        },
-        overwrite: {
-            native: true
-        }
+        ssl: true
     },
-    deploy: {
-        driver: 'pg',
+    testing: {
+        dialect: 'postgres',
         url: url,
         schema: 'public',
-        addIfNotExists: {
-            sslmode: 'require'
-        },
-        overwrite: {
-            native: true
-        }
+        ssl: true
     }
 };
