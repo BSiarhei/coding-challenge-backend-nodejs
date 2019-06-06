@@ -19,6 +19,9 @@ module.exports = {
         url: url,
         addIfNotExists: {
             sslmode: 'require'
+        },
+        overwrite: {
+            native: true
         }
     }
 };
